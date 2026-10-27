@@ -1,0 +1,73 @@
+# Employee Salary Calculator
+
+A simple Python program that collects the details of 5 employees and calculates each employee's overtime pay, bonus, and total salary.
+
+## Features
+
+- Takes input for 5 employees (name, salary, overtime hours)
+- Validates that salary and overtime hours are numbers
+- Calculates overtime pay, bonus, and total salary automatically
+- Prints a record for every employee
+
+## Requirements
+
+- Python 3.x
+- No external libraries needed
+
+## How to Run
+
+1. Save the code in a file, for example `employee.py`
+2. Open a terminal in the same folder
+3. Run:
+
+```bash
+python employee.py
+```
+
+## How It Works
+
+The program uses an `Employee` class with these methods:
+
+| Method | What it does |
+|---|---|
+| `final_salary()` | Returns overtime pay: `overtime_hours * 200` (0 if there are no overtime hours) |
+| `bonus_salary()` | Returns a 10% bonus if the salary is above 30,000, otherwise 0 |
+| `total_salary()` | Returns `salary + overtime pay + bonus` |
+
+The `check(prompt)` function keeps asking until the user enters a valid whole number, so the program does not crash on wrong input.
+
+## Salary Rules
+
+- **Overtime pay:** 200 per overtime hour
+- **Bonus:** 10% of salary, only if salary is greater than 30,000
+- **Total salary:** salary + overtime pay + bonus
+
+## Example
+
+```
+Enter employee name: Rahim
+enter the salary: 40000
+enter the overtime hours: 5
+...
+
+name: Rahim
+salary: 40000
+over time hours: 5
+bonus amount: 4000.0
+overtime bonus: 1000
+total salary: 45000.0
+```
+
+## Project Structure
+
+```
+employee.py    # main program
+README.md      # project documentation
+```
+
+## Possible Improvements
+
+- Add a menu to add, search, and show employees
+- Let the user choose how many employees to enter
+- Save the records to a file (CSV or text)
+- Allow decimal values for salary
